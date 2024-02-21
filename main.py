@@ -12,7 +12,16 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS users (
                     name TEXT NOT NULL,
                     email TEXT NOT NULL UNIQUE
                 )''')
+print("Table created successfully")
 
-# Commit the changes and close the connection
+# Execute a SQL query to insert data into the table
+cursor.execute('''INSERT INTO users (name, email) VALUES (?, ?)''',
+               ('John Doe', 'john@example.com'))
+cursor.execute('''INSERT INTO users (name, email) VALUES (?, ?)''',
+               ('Jane Smith', 'jane@example.com'))
+
+# Commit the changes
 conn.commit()
+
+# Close the connection
 conn.close()
