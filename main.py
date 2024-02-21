@@ -19,6 +19,8 @@ cursor.execute('''INSERT INTO users (name, email) VALUES (?, ?)''',
                ('John Doe', 'john@example.com'))
 cursor.execute('''INSERT INTO users (name, email) VALUES (?, ?)''',
                ('Jane Smith', 'jane@example.com'))
+cursor.execute('''INSERT INTO users (name, email) VALUES (?, ?)''',
+               ('Joe', 'joe@example.com'))
 
 # Commit the changes
 conn.commit()
