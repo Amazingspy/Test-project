@@ -6,15 +6,9 @@ conn = sqlite3.connect('mydatabase.db')
 # Create a cursor object to interact with the database
 cursor = conn.cursor()
 
-# Execute a SQL query to create a table
-# cursor.execute('''CREATE TABLE IF NOT EXISTS users (
-#                     id INTEGER PRIMARY KEY,
-#                     name TEXT NOT NULL,
-#                     email TEXT NOT NULL UNIQUE
-#                 )''')
-# print("Table created successfully")
+# Insert data into the table
 cursor.execute('''INSERT INTO users (name, email) VALUES (?, ?)''',
-               ('John Doe', 'john@example.com'))
+               ('Joe', 'joe@example.com'))
 print(f"1 record inserted: {cursor.rowcount} rows affected")
 
 # Commit the changes
