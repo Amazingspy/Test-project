@@ -8,7 +8,7 @@ cursor = conn.cursor()
 
 # Insert data into the table
 cursor.execute('''INSERT INTO users (name, email) VALUES (?, ?)''',
-               ('suchi', 'suchi@example.com'))
+               ('Joe', 'joe@example.com'))
 print(f"1 record inserted: {cursor.rowcount} rows affected")
 
 # Commit the changes
